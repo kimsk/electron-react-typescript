@@ -13,7 +13,7 @@
     - `yarn add electron-is-dev`
     - `yarn add --dev @types/electron-is-dev`
 
-3. Add [src/electron.ts](./src/electron.ts)
+3. Add [src/electron/index.ts](./src/electron/index.ts) and [src/electron/tsconfig.json](./src/electron/tsconfig.json)
 
 4. Update [package.json](./package.json)
 
