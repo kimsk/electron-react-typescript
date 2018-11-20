@@ -2,7 +2,7 @@
   "name": "electron-react-typescript",
   "version": "0.1.0",
   "private": true,
-  "main": "./build/electron.js",
+  "main": "./build/indexß.js",
   "homepage": "./",
   "dependencies": {
     "electron-is-dev": "^1.0.1",
@@ -11,12 +11,12 @@
     "react-scripts-ts": "3.1.0"
   },
   "scripts": {
-    "start": "set BROWSER=none&&react-scripts-ts start",
+    "start": "BROWSER=none react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "electron-js": "tsc ./src/electron.ts --outDir ./build",
-    "electron-dev": "yarn electron-js && set ELECTRON_START_URL=http://localhost:3000 && electron ./build/electron.js",
+    "electron-js": "tsc -p ./src/electron/tsconfig.json",
+    "electron-dev": "yarn electron-js && set ELECTRON_START_URL=http://localhost:3000 && electron ./build/index.js",
     "electron-pack": "build -w",
     "preelectron-pack": "yarn build && yarn electron-js"
   },
