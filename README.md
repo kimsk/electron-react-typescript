@@ -1,4 +1,6 @@
 
+[![Build Status](https://karlkim.visualstudio.com/kimsk-electron-react-typescript/_apis/build/status/kimsk.electron-react-typescript)](https://karlkim.visualstudio.com/kimsk-electron-react-typescript/_build/latest?definitionId=1)
+
 ![screenshot](./electron-react-typescript.PNG)
 
 # Steps
