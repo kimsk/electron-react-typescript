@@ -20,6 +20,7 @@
     "electron-pack-win": "yarn preelectron-pack && build --windows --publish never",
     "electron-pack-mac": "yarn preelectron-pack && build --macos --publish never",
     "electron-pack-linux": "yarn preelectron-pack && build --linux --publish never",
+    "electron-pack": "build",
     "preelectron-pack": "yarn build && yarn electron-build"
   },
   "build": {
