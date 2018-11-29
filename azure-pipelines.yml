@@ -8,3 +8,6 @@ steps:
   displayName: 'Install Node.js 10.x'
 - script: yarn install
 - script: yarn electron-pack-linux
+  displayName: 'pack for linux'
+  env:
+     GH_TOKEN: $(GH_TOKEN)
