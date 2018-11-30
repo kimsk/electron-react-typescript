@@ -1,6 +1,6 @@
 {
   "name": "electron-react-typescript",
-  "version": "v0.1.5",
+  "version": "v0.1.6",
   "private": true,
   "main": "./build/index.js",
   "homepage": "./",
