@@ -1,13 +1,48 @@
-pool:
-  vmImage: 'Ubuntu 16.04'
+jobs:
+- job: Linux
+  displayName: Build for Linux
+  pool:
+    vmImage: Ubuntu 16.04
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js 10.x'
-- script: yarn install
-- script: yarn electron-pack-linux
-  displayName: 'pack for linux'
-  env:
-     GH_TOKEN: $(GH_TOKEN)
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '10.x'
+    displayName: 'Install Node.js 10.x'
+  - script: yarn install
+  - script: yarn electron-pack-linux
+    displayName: 'pack for linux'
+    env:
+      GH_TOKEN: $(GH_TOKEN)
+
+- job: Windows
+  displayName: Build for Windows
+  pool:
+    vmImage: VS2017-Win2016
+
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '10.x'
+    displayName: 'Install Node.js 10.x'
+  - script: yarn install
+  - script: yarn electron-pack-win
+    displayName: 'pack for windows'
+    env:
+      GH_TOKEN: $(GH_TOKEN)
+
+- job: macOS
+  displayName: Build for macOS
+  pool:
+    vmImage: macOS 10.13
+
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '10.x'
+    displayName: 'Install Node.js 10.x'
+  - script: yarn install
+  - script: yarn electron-pack-mac
+    displayName: 'pack for macOS'
+    env:
+      GH_TOKEN: $(GH_TOKEN)

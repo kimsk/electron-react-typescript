@@ -33,3 +33,4 @@
 - [From React to an Electron app ready for production](https://medium.com/@kitze/%EF%B8%8F-from-react-to-an-electron-app-ready-for-production-a0468ecb1da3)
 - [electron/electron-quick-start-typescript](https://github.com/electron/electron-quick-start-typescript)
 - [electron builder configuration](https://www.electron.build/configuration/configuration)
+- [Azure Pipelines YAML schema reference](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=vsts&tabs=schema)
