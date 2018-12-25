@@ -4,7 +4,9 @@ import * as path from "path";
 
 let mainWindow: Electron.BrowserWindow | null;
 
+
 const electronObject = "electronObject"
+declare var global: any
 global[electronObject] = {
   a: 1,
   b: "test",
