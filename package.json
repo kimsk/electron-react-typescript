@@ -1,7 +1,9 @@
 {
   "name": "electron-react-typescript",
-  "version": "0.1.0",
+  "version": "v0.1.6",
   "private": true,
+  "main": "./build/index.js",
+  "homepage": "./",
   "dependencies": {
     "@types/jest": "23.3.10",
     "@types/node": "10.12.18",
