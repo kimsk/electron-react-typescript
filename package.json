@@ -1,6 +1,12 @@
 {
   "name": "electron-react-typescript",
-  "version": "v0.1.6",
+  "author": {
+    "name": "Karlkim Suwanmongkol",
+    "email": "hello@karlk.im",
+    "url": "https://karlk.im/"
+  },
+  "description": "electron app with react and typescript",
+  "version": "v0.1.7",
   "private": true,
   "main": "./build/index.js",
   "homepage": "./",
@@ -36,7 +42,8 @@
     ],
     "directories": {
       "buildResources": "assets"
-    }
+    },
+    "extends": null
   },
   "eslintConfig": {
     "extends": "react-app"
