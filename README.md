@@ -7,7 +7,7 @@
 
 1. Create a new [TypeScript React app](https://github.com/wmonk/create-react-app-typescript): 
 
-    - `create-react-app electron-react-typescript --scripts-version=react-scripts-ts`
+    - `create-react-app electron-react-typescript --typescript`
 
 2. Add electron packages ([electronjs](https://electronjs.org/) & [electron builder](https://www.electron.build/)): 
     - `yarn add --dev electron`
@@ -17,7 +17,7 @@
 
 3. Add [src/electron/index.ts](./src/electron/index.ts) and [src/electron/tsconfig.json](./src/electron/tsconfig.json)
 
-4. Update [package.json](./package.json)
+4. Update [package.json](./package.json) (update `scripts` and add `build`)
 
 5. To start local dev:
     - `yarn start`

@@ -1,20 +1,31 @@
 {
   "name": "electron-react-typescript",
-  "version": "v0.1.6",
+  "author": {
+    "name": "Karlkim Suwanmongkol",
+    "email": "hello@karlk.im",
+    "url": "https://karlk.im/"
+  },
+  "description": "electron app with react and typescript",
+  "version": "v0.1.7",
   "private": true,
   "main": "./build/index.js",
   "homepage": "./",
   "dependencies": {
+    "@types/jest": "23.3.10",
+    "@types/node": "10.12.18",
+    "@types/react": "16.7.18",
+    "@types/react-dom": "16.0.11",
     "electron-is-dev": "^1.0.1",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts-ts": "3.1.0"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts": "2.1.2",
+    "typescript": "3.2.2"
   },
   "scripts": {
-    "start": "BROWSER=none react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
+    "start": "BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
     "electron-build": "tsc -p ./src/electron/tsconfig.json",
     "electron-dev": "yarn electron-build && set ELECTRON_START_URL=http://localhost:3000 && electron ./build/index.js",
     "electron-pack-win": "yarn preelectron-pack && build --windows --publish always",
@@ -31,16 +42,21 @@
     ],
     "directories": {
       "buildResources": "assets"
-    }
+    },
+    "extends": null
   },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "@types/electron-is-dev": "^0.3.0",
-    "@types/jest": "^23.3.9",
-    "@types/node": "^10.12.7",
-    "@types/react": "^16.7.6",
-    "@types/react-dom": "^16.0.9",
-    "electron": "^3.0.9",
-    "electron-builder": "^20.34.0",
-    "typescript": "^3.1.6"
+    "electron": "^4.0.0",
+    "electron-builder": "^20.38.4"
   }
 }
